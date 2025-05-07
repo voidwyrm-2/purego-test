@@ -1,5 +1,6 @@
 both: all
 	gcc -shared -o blib.so clib.so cclib.so
+	mv clib.so cclib.so run/
 
 all: c cc
 
@@ -10,5 +11,6 @@ cc:
 	g++ -shared -o cclib.so lib.cc
 
 clean:
-	rm -rf clib.so
-	rm -rf cclib.so
+	rm -rf *.so
+	rm -rf *.so
+	rm -rf run/*.so
